@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="br.com.sodexo.product.dao.CommonDAO">
+	<select id="verifyDominio" resultType="java.lang.String">
+		<![CDATA[
+			SELECT rv_low_value 
+			FROM cg_ref_codes 
+			WHERE rv_domain = #{param1}
+			AND rv_low_value = #{param2}
+		]]>
+	</select>
+</mapper>
